@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'LanguageKit_Example' do
+  pod 'LanguageKit', :path => '../'
+
+  target 'LanguageKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
