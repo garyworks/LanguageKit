@@ -2,11 +2,12 @@
 //  AppDelegate.swift
 //  LanguageKit
 //
-//  Created by garyworks on 03/05/2018.
-//  Copyright (c) 2018 garyworks. All rights reserved.
+//  Created by Gary Law on 03/05/2018.
+//  Copyright © 2018 Gary Law. All rights reserved.
 //
 
 import UIKit
+import LanguageKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+   
+        
+        //Setup with a string file resource
+        LanguageKit.shared.setup(filename: "Localizable.csv")
+        
+        //Set the language you want
+        LanguageKit.shared.setLanguage(language: "en-US")
+        
+        
         return true
     }
 
