@@ -2,7 +2,7 @@
 //  LanguageKit.swift
 //  LanguageKit
 //
-//  Created by Gary on 2/2/2017.
+//  Created by Gary Law on 2/2/2017.
 //  Copyright © 2017 Gary. All rights reserved.
 //
 

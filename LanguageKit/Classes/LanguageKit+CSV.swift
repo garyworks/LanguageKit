@@ -2,7 +2,7 @@
 //  LanguageKit+CSV.swift
 //  LanguageKit
 //
-//  Created by Gary on 5/3/2018.
+//  Created by Gary Law on 5/3/2018.
 //
 
 import Foundation

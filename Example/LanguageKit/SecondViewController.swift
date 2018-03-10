@@ -2,7 +2,7 @@
 //  SecondViewController.swift
 //  LanguageKit_Example
 //
-//  Created by Gary on 9/3/2018.
+//  Created by Gary Law on 9/3/2018.
 //  Copyright © 2018 Gary Law. All rights reserved.
 //
 

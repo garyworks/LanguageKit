@@ -10,9 +10,8 @@
 		435074DCF419B446157A6773AC0E9CEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		4E099045204CCE9A00FC7529 /* LanguageKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E099044204CCE9A00FC7529 /* LanguageKit.swift */; };
 		4E099049204CD4DE00FC7529 /* LanguageKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E099048204CD4DE00FC7529 /* LanguageKit+Extension.swift */; };
-		4E09904B204D94CE00FC7529 /* LanguageKit+CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E09904A204D94CE00FC7529 /* LanguageKit+CSV.swift */; };
+		4E0990712053B18A00FC7529 /* LanguageKit+CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0990702053B18A00FC7529 /* LanguageKit+CSV.swift */; };
 		5657EA6F75D7A10FF099464E73763F9B /* Pods-LanguageKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 644B0396CED8A4854739BF059492DF46 /* Pods-LanguageKit_Example-dummy.m */; };
-		78ACBFA1245E5E93DD65ADD91F17E187 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEF09CC30A919AAC2064646D7098B98 /* ReplaceMe.swift */; };
 		8796486148CF74FAAFCB550D989CD572 /* LanguageKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E86E8C4EC92E3A5D169A00DE1C17AC3D /* LanguageKit-dummy.m */; };
 		96B3255B3046858DC128AD002D3AE78A /* LanguageKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B23F9EBB31C3E3CD70DB6D985E88F484 /* LanguageKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC0C884B29FBB6326A69AD311007A4F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -44,7 +43,7 @@
 		46C6CE936D8F5A29601ADE9AB73C5B02 /* Pods-LanguageKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LanguageKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4E099044204CCE9A00FC7529 /* LanguageKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LanguageKit.swift; path = LanguageKit/Classes/LanguageKit.swift; sourceTree = "<group>"; };
 		4E099048204CD4DE00FC7529 /* LanguageKit+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LanguageKit+Extension.swift"; path = "LanguageKit/Classes/LanguageKit+Extension.swift"; sourceTree = "<group>"; };
-		4E09904A204D94CE00FC7529 /* LanguageKit+CSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguageKit+CSV.swift"; sourceTree = "<group>"; };
+		4E0990702053B18A00FC7529 /* LanguageKit+CSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "LanguageKit+CSV.swift"; path = "LanguageKit/Classes/LanguageKit+CSV.swift"; sourceTree = "<group>"; };
 		53D68042DEF300D057934C604F321E6C /* Pods-LanguageKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LanguageKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		553F04024E3089F1019CC29CAEF54830 /* Pods-LanguageKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LanguageKit_Example.modulemap"; sourceTree = "<group>"; };
 		62C0950F59E9EA5921C62EECCDE09D18 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,7 +51,6 @@
 		644B0396CED8A4854739BF059492DF46 /* Pods-LanguageKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LanguageKit_Example-dummy.m"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		663393E549C6B7CFA66EA3912818A981 /* Pods-LanguageKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LanguageKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		6DEF09CC30A919AAC2064646D7098B98 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = LanguageKit/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		77C1DCF918C355230C5D2C17407E3F03 /* Pods-LanguageKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LanguageKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7BA727DAE05616C8DDA7B985955FBD7C /* Pods-LanguageKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LanguageKit_Example-frameworks.sh"; sourceTree = "<group>"; };
 		7D1315383E20D126AB6DFB4683ECA25A /* LanguageKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = LanguageKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -181,8 +179,7 @@
 			children = (
 				4E099044204CCE9A00FC7529 /* LanguageKit.swift */,
 				4E099048204CD4DE00FC7529 /* LanguageKit+Extension.swift */,
-				4E09904A204D94CE00FC7529 /* LanguageKit+CSV.swift */,
-				6DEF09CC30A919AAC2064646D7098B98 /* ReplaceMe.swift */,
+				4E0990702053B18A00FC7529 /* LanguageKit+CSV.swift */,
 				B0240469A3FB55191FE463350A8DAA51 /* Pod */,
 				F1B8BCF43A7B6919F72ABAB86B56D7CD /* Support Files */,
 			);
@@ -352,11 +349,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E09904B204D94CE00FC7529 /* LanguageKit+CSV.swift in Sources */,
+				4E0990712053B18A00FC7529 /* LanguageKit+CSV.swift in Sources */,
 				4E099045204CCE9A00FC7529 /* LanguageKit.swift in Sources */,
 				8796486148CF74FAAFCB550D989CD572 /* LanguageKit-dummy.m in Sources */,
 				4E099049204CD4DE00FC7529 /* LanguageKit+Extension.swift in Sources */,
-				78ACBFA1245E5E93DD65ADD91F17E187 /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
