@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LanguageKit'
-  s.version          = '0.0.1'
+  s.version          = '0.1.0'
   s.summary          = 'LanguageKit is an iOS library for easy switch between different language. It use a CSV file for easy editing and sharing strings.'
 
 # This description is used to generate tags and improve search results.
