@@ -33,7 +33,6 @@
                             <constraint firstItem="Tlu-zT-7dD" firstAttribute="centerY" secondItem="eSs-4j-E9y" secondAttribute="centerY" id="C4V-gp-f4M"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Tlu-zT-7dD" secondAttribute="trailing" constant="12" id="FDS-El-Ijk"/>
                             <constraint firstItem="Tlu-zT-7dD" firstAttribute="leading" secondItem="eSs-4j-E9y" secondAttribute="leadingMargin" constant="12" id="Oto-jo-LgH"/>
-                            <constraint firstItem="Tlu-zT-7dD" firstAttribute="centerX" secondItem="eSs-4j-E9y" secondAttribute="centerX" id="Y22-h5-ueD"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" id="EcE-pS-fu6"/>
@@ -81,10 +80,9 @@
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eth-Qe-rKd">
-                                <rect key="frame" x="16" y="160" width="60" height="44"/>
+                                <rect key="frame" x="16" y="160" width="46" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="li5-dL-SAa"/>
-                                    <constraint firstAttribute="width" constant="60" id="rFG-2N-wcn"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>

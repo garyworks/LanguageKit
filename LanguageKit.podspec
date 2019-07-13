@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LanguageKit'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'LanguageKit is an iOS library for easy switch between different language. It use a CSV file for easy editing and sharing strings.'
 
 # This description is used to generate tags and improve search results.
@@ -28,10 +28,10 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/garyworks/LanguageKit.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/garyworks'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.1'
 
   s.source_files = 'LanguageKit/Classes/**/*'
-  s.swift_version = '4.0'
+  s.swift_version = '5.0'
   
   # s.resource_bundles = {
   #   'LanguageKit' => ['LanguageKit/Assets/*.png']
