@@ -26,10 +26,10 @@ extension String {
 }
 public extension String {
     
-    public var localized:String {
+    var localized:String {
         return LanguageKit.shared.localizedStringForString(originalStr: self)
     }
-    public func localizedForLanguage(key:String) -> String {
+    func localizedForLanguage(key:String) -> String {
         return LanguageKit.shared.localizedStringForString(originalStr: self, targetLanguage: key)
     }
 }
@@ -71,7 +71,7 @@ extension UIView {
 public extension UIViewController {
     
     
-    @IBOutlet public var languageComponents:[UIView]! {
+    @IBOutlet var languageComponents:[UIView]! {
         get {
             return objc_getAssociatedObject(self, &xoAssociationKey) as? [UIView] ?? []
         }
@@ -82,10 +82,11 @@ public extension UIViewController {
     
     func updateLanguage() {
         LanguageKit.shared.translateViewsContent(views: languageComponents)
+        LanguageKit.shared.translateViewControllersContent(vc: self)
     }
     
     // MARK: - Swizzling Setup
-    final public class func swizzlingSetup() {
+    final class func swizzlingSetup() {
         let originalSelector = #selector(viewWillAppear(_:))
         let swizzledSelector = #selector(proj_viewWillAppear(animated:))
         swizzling(UIViewController.self, originalSelector, swizzledSelector)
@@ -94,6 +95,12 @@ public extension UIViewController {
     @objc func proj_viewWillAppear(animated: Bool) {
         self.proj_viewWillAppear(animated: animated)
         updateLanguage()
+        
+        NotificationCenter.default.addObserver(forName: .LanguageKitUpdateLanguage, object: nil, queue: OperationQueue.main) { (notification) in
+            self.updateLanguage()
+        }
+        
+   
     }
 
 

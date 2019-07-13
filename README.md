@@ -35,7 +35,7 @@ pod 'LanguageKit'
 You need a string file in CSV format, like the one below.  
 A example had included in the example project. (Localizable.csv)
 
-|Key|en-US|zh-Hant|zh-Hans|ja-JP|
+|Key|en|zh-Hant|zh-Hans|ja|
 | ------------- |-------------| -----|
 |language.name|English|繁體中文|简体中文|日本語|
 |button|Button|按鍵|按键|ボタン|
@@ -65,7 +65,7 @@ To use it:
 
 ### Switch language
 ```swift
-	LanguageKit.shared.setLanguage(language: "ja-JP")
+	LanguageKit.shared.setLanguage(language: "ja")
 ```
 
 LanguageKit will lookup the string you provided and return the translated version.
@@ -80,9 +80,26 @@ Supported UIControl:
 - UISearchBar (Placeholder)
 - UITextField (Placeholder)
 - UISegmentControl
+- UITabBar
+- UINavigationBar's titleItem
 
 
+## Language System
 
+There are two types of the language system included in the library:
+
+### Runtime Language Switcher (Default)
+You can switch langauge on the fly, the 
+ 
+
+### System Language Switcher (Required restart)
+There are numbers of components in a app that is not runtime changeble (e.g.  Default UINavigationController Back button, SafariWebViewController, Permission Dialog etc.)
+
+If you need to localized these, you need to use 
+```swift
+	LanguageKit.shared.setLanguage(language: "ja", asSystemLanguage: true)
+```
+This will brings up a dialog to notify an app restart.
 
 ## Author
 

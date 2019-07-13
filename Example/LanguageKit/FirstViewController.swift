@@ -27,7 +27,7 @@ class FirstViewController: UIViewController {
         for lang in LanguageKit.shared.allLanguages {
             alert.addAction(UIAlertAction(title: "language.name".localizedForLanguage(key: lang), style: .default, handler: { (action) in
                 LanguageKit.shared.setLanguage(language: lang)
-                self.updateLanguage()
+                LanguageKit.shared.updateLanguage()
             }))
         }
         

@@ -13,10 +13,15 @@ enum Language:String {
     case en = "en"
     case zh_Hant = "zh-Hant"
     case zh_Hans = "zh-Hans"
+    case ja = "ja"
+}
+
+extension Notification.Name {
+    static let LanguageKitUpdateLanguage = Notification.Name("LanguageKitUpdateLanguage")
 }
 
 open class LanguageKit {
-    open static let shared = LanguageKit()
+    public static let shared = LanguageKit()
     
     let savedLanguageKey = "languagekit.savedLanguage"
     
@@ -47,29 +52,27 @@ open class LanguageKit {
         self.filepath = path
         loadFile()
         
-        if UserDefaults.standard.object(forKey: savedLanguageKey) == nil {
+        let defaults = UserDefaults.standard
+        
+
+        
+        if defaults.object(forKey: savedLanguageKey) == nil {
             if let firstLang = NSLocale.preferredLanguages.first {
                 
-                if firstLang.hasPrefix("en") {
-                    UserDefaults.standard.set("en", forKey: savedLanguageKey)
-                }
-                else if firstLang.hasPrefix("zh-Hant") {
-                    UserDefaults.standard.set("zh-Hant", forKey: savedLanguageKey)
-                }
-                else if firstLang.hasPrefix("zh-Hans") {
-                    UserDefaults.standard.set("zh-Hans", forKey: savedLanguageKey)
+                if languageKeys.contains(firstLang) {
+                    defaults.set(languageKeys, forKey: savedLanguageKey)
                 }
                 else {
-                    UserDefaults.standard.set("en", forKey: savedLanguageKey)
+                    defaults.set("en", forKey: savedLanguageKey)
                 }
-            
-                UserDefaults.standard.synchronize()
+                
+                defaults.synchronize()
                 
             }
         }
         
-        if UserDefaults.standard.object(forKey: savedLanguageKey) != nil {
-            if let lang = UserDefaults.standard.object(forKey: savedLanguageKey) as? String {
+        if defaults.object(forKey: savedLanguageKey) != nil {
+            if let lang = defaults.object(forKey: savedLanguageKey) as? String {
                 if languageKeys.contains(lang) {
                     currentLanguage = lang
                 }
@@ -91,7 +94,12 @@ open class LanguageKit {
         LanguageKit.shared.currentLanguage = language
         
         if (asSystemLanguage) {
-            UserDefaults.standard.set([language], forKey: "AppleLanguage")
+            
+            self.restart {
+                UserDefaults.standard.set([language], forKey: "AppleLanguages")
+                UserDefaults.standard.synchronize()
+            }
+            
         }
         
         UserDefaults.standard.set(language, forKey: savedLanguageKey)
@@ -192,8 +200,13 @@ open class LanguageKit {
                 view.placeholder = view.placeholder?.localized
             }
             else if let view = view as? UISegmentedControl {
-                for i in 0...view.numberOfSegments {
+                for i in 0..<view.numberOfSegments {
                     view.setTitle(view.titleForSegment(at: i)?.localized, forSegmentAt: i)
+                }
+            }
+            else if let view = view as? UITabBar {
+                for item in view.items ?? [] {
+                    item.title = item.title?.localized
                 }
             }
             
@@ -201,9 +214,46 @@ open class LanguageKit {
         
     }
     
+    func translateViewControllersContent(vc:UIViewController) {
+        
+        if let title = vc.navigationItem.title {
+            print(title)
+            vc.navigationItem.title = title.localized
+        }
+        
+        
+        if let nav = vc.navigationController {
+            
+            if let title = nav.navigationItem.title {
+                print(title)
+                nav.navigationItem.title = title.localized
+            }
+            
+            
+            
+        }
+        
+    }
 
     
+    open func updateLanguage() {
+        NotificationCenter.default.post(name: .LanguageKitUpdateLanguage, object: nil)
+    }
     
+    open func restart(complete:@escaping (()->Void)) {
+        
+        guard let vc = UIApplication.shared.keyWindow?.rootViewController else { return }
+        
+        let alert = UIAlertController(title: "restart.message".localized, message: nil, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "restart.confirm.btn".localized, style: .default, handler: { (action) in
+            complete()
+            exit(0)
+        }))
+        
+        vc.present(alert, animated: true, completion: nil)
+        
+    }
     
     
 }

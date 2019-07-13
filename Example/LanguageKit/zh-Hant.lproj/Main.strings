@@ -1,0 +1,30 @@
+
+/* Class = "UIButton"; normalTitle = "switchlanguage"; ObjectID = "2bU-4A-dwe"; */
+"2bU-4A-dwe.normalTitle" = "switchlanguage";
+
+/* Class = "UILabel"; text = "description"; ObjectID = "BwD-eG-bKy"; */
+"BwD-eG-bKy.text" = "description";
+
+/* Class = "UITabBarItem"; title = "First"; ObjectID = "CEf-sL-02O"; */
+"CEf-sL-02O.title" = "First";
+
+/* Class = "UITabBarItem"; title = "Second"; ObjectID = "EcE-pS-fu6"; */
+"EcE-pS-fu6.title" = "Second";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Eth-Qe-rKd"; */
+"Eth-Qe-rKd.normalTitle" = "Button";
+
+/* Class = "UISegmentedControl"; PZs-xr-mYs.segmentTitles[0] = "First"; ObjectID = "PZs-xr-mYs"; */
+"PZs-xr-mYs.segmentTitles[0]" = "First";
+
+/* Class = "UISegmentedControl"; PZs-xr-mYs.segmentTitles[1] = "Second"; ObjectID = "PZs-xr-mYs"; */
+"PZs-xr-mYs.segmentTitles[1]" = "Second";
+
+/* Class = "UILabel"; text = "This is page 2, there should be nothing you need to set at this page."; ObjectID = "Tlu-zT-7dD"; */
+"Tlu-zT-7dD.text" = "This is page 2, there should be nothing you need to set at this page.";
+
+/* Class = "UIButton"; normalTitle = "Next page"; ObjectID = "meW-Lj-JTa"; */
+"meW-Lj-JTa.normalTitle" = "Next page";
+
+/* Class = "UITabBarItem"; title = "Third"; ObjectID = "s7k-eZ-e08"; */
+"s7k-eZ-e08.title" = "Third";
