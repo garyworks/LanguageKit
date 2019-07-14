@@ -11,6 +11,8 @@ import LanguageKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var currentLanguageLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,7 +20,14 @@ class FirstViewController: UIViewController {
         
         //Example: Get a text programatically
         print("button".localized)
+        
+        currentLanguageLabel.text = LanguageKit.shared.currentLanguage
 
+    }
+    
+    override func didUpdateLanguage() {
+        //If language is updated, update the label as well
+        currentLanguageLabel.text = LanguageKit.shared.currentLanguage
     }
     @IBAction func switchAction(_ sender: UIButton) {
         

@@ -35,7 +35,7 @@ open class LanguageKit {
     
     var filepath:String = ""
     var basedLanguage = "en"
-    var currentLanguage = "en"
+    open var currentLanguage = "en"
     
     var languageKeys:[String] = []
     var languageTable:[String:[String]] = [:]

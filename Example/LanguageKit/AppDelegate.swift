@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         LanguageKit.shared.setup(filename: "Localizable.csv")
         
         //Set the language you want
-        LanguageKit.shared.setLanguage(language: "en-US")
+        LanguageKit.shared.setLanguage(language: "en")
         
         
         return true

@@ -49,8 +49,13 @@ extension UIView {
     }
     
 
-    func updateLanguage() {
+    @objc func updateLanguage() {
         LanguageKit.shared.translateViewsContent(views: languageComponents)
+        self.didUpdateLanguage()
+    }
+    
+    @objc open func didUpdateLanguage() {
+        
     }
     
     // MARK: - Swizzling Setup
@@ -68,7 +73,7 @@ extension UIView {
 }
 
 
-public extension UIViewController {
+extension UIViewController {
     
     
     @IBOutlet var languageComponents:[UIView]! {
@@ -83,6 +88,11 @@ public extension UIViewController {
     func updateLanguage() {
         LanguageKit.shared.translateViewsContent(views: languageComponents)
         LanguageKit.shared.translateViewControllersContent(vc: self)
+        self.didUpdateLanguage()
+    }
+    
+    @objc open func didUpdateLanguage() {
+
     }
     
     // MARK: - Swizzling Setup
