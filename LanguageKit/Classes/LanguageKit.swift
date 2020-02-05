@@ -87,7 +87,7 @@ open class LanguageKit {
         UIViewController.swizzlingSetup()
     }
     
-    open func setLanguage(language:String, asSystemLanguage:Bool = false) {
+    open func setLanguage(language:String, asSystemLanguage:Bool = false, completion:((Bool) -> Void)? = nil) {
         
         assert(LanguageKit.shared.allLanguages.contains(language) == true, "Language Key not exist")
         
@@ -95,11 +95,25 @@ open class LanguageKit {
         
         if (asSystemLanguage) {
             
-            self.restart {
-                UserDefaults.standard.set([language], forKey: "AppleLanguages")
-                UserDefaults.standard.synchronize()
+            self.restart { success in
+                
+                if success {
+                    UserDefaults.standard.set([language], forKey: "AppleLanguages")
+                    UserDefaults.standard.synchronize()
+                }
+                
+                
+                if let completion = completion {
+                    completion(success)
+                }
+                
             }
             
+        }
+        else {
+            if let completion = completion {
+                completion(true)
+            }
         }
         
         UserDefaults.standard.set(language, forKey: savedLanguageKey)
@@ -242,16 +256,18 @@ open class LanguageKit {
         NotificationCenter.default.post(name: .LanguageKitUpdateLanguage, object: nil)
     }
     
-    open func restart(complete:@escaping (()->Void)) {
+    open func restart(complete:@escaping ((_ success:Bool)->Void)) {
         
         guard let vc = UIApplication.shared.keyWindow?.rootViewController else { return }
         
         let alert = UIAlertController(title: "restart.message".localized, message: nil, preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "restart.cancel.btn".localized, style: .cancel, handler:nil))
+        alert.addAction(UIAlertAction(title: "restart.cancel.btn".localized, style: .cancel, handler: { (action) in
+            complete(false)
+        }))
         
         alert.addAction(UIAlertAction(title: "restart.confirm.btn".localized, style: .default, handler: { (action) in
-            complete()
+            complete(true)
             exit(0)
         }))
         
