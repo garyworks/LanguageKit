@@ -1,6 +1,7 @@
 key,en,zh-Hant,zh-Hans,ja
 restart.message,Please restart the app to take changes.,請重新啟動應用以進行更改。,请重新启动应用以进行更改。,変更を適用するにはアプリを再起動してください。
 restart.confirm.btn,Confirm,確認,确认,確認する
+restart.cancel.btn,Cancel,取消,取消,キャンセル
 language.name,English,繁體中文,简体中文,日本語
 ,Text without key.,沒有鍵的文本。,没有键的文本。,キーのないテキスト。
 button,Button,按鍵,按键,ボタン

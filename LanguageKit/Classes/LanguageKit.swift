@@ -210,6 +210,8 @@ open class LanguageKit {
                 }
             }
             
+            
+            
         }
         
     }
@@ -245,6 +247,8 @@ open class LanguageKit {
         guard let vc = UIApplication.shared.keyWindow?.rootViewController else { return }
         
         let alert = UIAlertController(title: "restart.message".localized, message: nil, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "restart.cancel.btn".localized, style: .cancel, handler:nil))
         
         alert.addAction(UIAlertAction(title: "restart.confirm.btn".localized, style: .default, handler: { (action) in
             complete()
