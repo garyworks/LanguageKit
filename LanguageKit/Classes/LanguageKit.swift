@@ -91,13 +91,14 @@ open class LanguageKit {
         
         assert(LanguageKit.shared.allLanguages.contains(language) == true, "Language Key not exist")
         
-        LanguageKit.shared.currentLanguage = language
+        
         
         if (asSystemLanguage) {
             
             self.restart { success in
                 
                 if success {
+                    LanguageKit.shared.currentLanguage = language
                     UserDefaults.standard.set([language], forKey: "AppleLanguages")
                     UserDefaults.standard.synchronize()
                 }
@@ -111,6 +112,7 @@ open class LanguageKit {
             
         }
         else {
+            LanguageKit.shared.currentLanguage = language
             if let completion = completion {
                 completion(true)
             }
