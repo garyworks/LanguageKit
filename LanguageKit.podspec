@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LanguageKit'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'LanguageKit is an iOS library for easy switch between different language.'
 
 # This description is used to generate tags and improve search results.
